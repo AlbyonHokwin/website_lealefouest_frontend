@@ -2,21 +2,36 @@ import Head from 'next/head';
 import styles from '@/styles/Home.module.css';
 
 import { GetStaticProps } from 'next';
-import { groq } from 'next-sanity';
 import { fetchSanity } from './api/fetchSanity';
+import { groqQueries } from './api/groqQueries';
 
 import type { Profile } from '@/types/Profile';
 import type { Home } from '@/types/Home';
 import type { Why } from '@/types/Why';
+import type { Solutions } from '@/types/Solutions';
+import type { Methodologies } from '@/types/Methodologies';
+import type { Pricing } from '@/types/Pricing';
+import type { Expectations } from '@/types/Expectations';
+import type { Contact } from '@/types/Contact';
+import type { OtherMedias } from '@/types/OtherMedias';
+import { Component } from '@/types/Component';
 
 type Props = {
+  components: Component[];
   profile: Profile;
   home: Home;
   why: Why;
+  solutions: Solutions;
+  methodologies: Methodologies;
+  pricing: Pricing;
+  expectations: Expectations;
+  contact: Contact;
+  otherMedias: OtherMedias;
 }
 
 export default function Home(props: Props) {
-  // Object.keys(props).forEach(key => console.log(key, props[key]));
+  const getKeys = Object.keys as <T extends object>(obj: T) => Array<keyof T>
+  getKeys(props).forEach(key => console.log(key, props[key]));
 
   return (
     <>
@@ -33,28 +48,23 @@ export default function Home(props: Props) {
 };
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
-  type PropsArray = [
-    Profile,
-    Home,
-    Why,
-  ];
+  const query = `{
+    "components": ${groqQueries.components},
+    "profile": ${groqQueries.profile},
+    "home": ${groqQueries.home},
+    "why": ${groqQueries.why},
+    "solutions": ${groqQueries.solutions},
+    "methodologies": ${groqQueries.methodologies},
+    "pricing": ${groqQueries.pricing},
+    "expectations": ${groqQueries.expectations},
+    "contact": ${groqQueries.contact},
+    "otherMedias": ${groqQueries.otherMedias},
+  }`
 
-  const [
-    profile,
-    home,
-    why,
-  ]: PropsArray = await Promise.all([
-    fetchSanity(groq`*[_type == "profile"]{firstname, lastname, email, picture->}[0]`),
-    fetchSanity(groq`*[_type == "home"]{component->{name, page}, introductory, picture->}[0]`),
-    fetchSanity(groq`*[_type == "why"]{component->{name, page}, headTitle, shockPhrase, causes[] {name, icon->}}[0]`),
-  ])
+  const props: Props = await fetchSanity(query);
 
   return {
-    props: {
-      profile,
-      home,
-      why,
-    },
+    props,
     revalidate: 10
   }
 };
