@@ -17,7 +17,7 @@ export type Media = {
     socialNetworks?: SocialNetwork[];
 }
 
-export type OtherMedias = {
+export type OtherMediasProps = {
     component: Component;
     headTitle: string;
     arrowIcon: SanityIcon;

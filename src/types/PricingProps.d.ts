@@ -1,7 +1,7 @@
 import type { Component } from './Component';
 import type { SanityIcon } from './SanityIcon';
 
-export type Pricing = {
+export type PricingProps = {
     component: Component;
     headTitle: string;
     price: number;

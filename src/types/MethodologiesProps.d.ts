@@ -6,7 +6,7 @@ export type Method = {
     picture: SanityImage;
 }
 
-export type Methodologies = {
+export type MethodologiesProps = {
     component: Component;
     headTitle: string;
     methods: Method[];

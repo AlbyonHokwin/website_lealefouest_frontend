@@ -1,15 +1,13 @@
 import type { Component } from './Component';
 import type { SanityIcon } from './SanityIcon';
-import type { RichText } from './RichText';
 
-export type Cause = {
-    name: string;
+export type Expectation = {
+    text: string;
     icon: SanityIcon;
 }
 
-export type Why = {
+export type ExpectationsProps = {
     component: Component;
     headTitle: string;
-    shockPhrase: RichText;
-    causes: Cause[];
+    expectations: Expectation[];
 }

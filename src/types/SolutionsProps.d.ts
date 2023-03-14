@@ -3,7 +3,7 @@ import type { SanityImage } from './SanityImage';
 import type { SanityIcon } from './SanityIcon';
 import type { RichText } from './RichText';
 
-export type Solutions = {
+export type SolutionsProps = {
     component: Component;
     headTitle: string;
     picture: SanityImage;

@@ -1,6 +1,6 @@
 import type { Component } from './Component';
 
-export type Contact = {
+export type ContactProps = {
     component: Component;
     headTitle: string;
     buttonText: string;
