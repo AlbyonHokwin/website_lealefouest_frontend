@@ -1,37 +1,52 @@
 import Head from 'next/head';
 import styles from '@/styles/Home.module.css';
 
+import Frontage from '@/components/Frontage';
+
 import { GetStaticProps } from 'next';
 import { fetchSanity } from './api/fetchSanity';
 import { groqQueries } from './api/groqQueries';
 
+import type { Component } from '@/types/Component';
 import type { Profile } from '@/types/Profile';
-import type { Home } from '@/types/Home';
-import type { Why } from '@/types/Why';
-import type { Solutions } from '@/types/Solutions';
-import type { Methodologies } from '@/types/Methodologies';
-import type { Pricing } from '@/types/Pricing';
-import type { Expectations } from '@/types/Expectations';
-import type { Contact } from '@/types/Contact';
-import type { OtherMedias } from '@/types/OtherMedias';
-import { Component } from '@/types/Component';
+import type { FrontageProps } from '@/types/FrontageProps';
+import type { WhyProps } from '@/types/WhyProps';
+import type { SolutionsProps } from '@/types/SolutionsProps';
+import type { MethodologiesProps } from '@/types/MethodologiesProps';
+import type { PricingProps } from '@/types/PricingProps';
+import type { ExpectationsProps } from '@/types/ExpectationsProps';
+import type { ContactProps } from '@/types/ContactProps';
+import type { OtherMediasProps } from '@/types/OtherMediasProps';
 
 type Props = {
   components: Component[];
   profile: Profile;
-  home: Home;
-  why: Why;
-  solutions: Solutions;
-  methodologies: Methodologies;
-  pricing: Pricing;
-  expectations: Expectations;
-  contact: Contact;
-  otherMedias: OtherMedias;
+  frontage: FrontageProps;
+  why: WhyProps;
+  solutions: SolutionsProps;
+  methodologies: MethodologiesProps;
+  pricing: PricingProps;
+  expectations: ExpectationsProps;
+  contact: ContactProps;
+  otherMedias: OtherMediasProps;
 }
 
 export default function Home(props: Props) {
-  const getKeys = Object.keys as <T extends object>(obj: T) => Array<keyof T>
-  getKeys(props).forEach(key => console.log(key, props[key]));
+  // const getKeys = Object.keys as <T extends object>(obj: T) => Array<keyof T>
+  // getKeys(props).forEach(key => console.log(key, props[key]));
+
+  const tableComponents: Record<string, JSX.Element> = {
+    "Home": <Frontage {...props.frontage} />,
+  }
+
+  const sections = props.components
+    .filter(component => component.page > 0 && !!tableComponents[component.name])
+    .map(component => {
+      const ComponentToUse = tableComponents[component.name];
+      return <section key={component.name} className={styles.section}>
+        {ComponentToUse}
+      </section>
+    })
 
   return (
     <>
@@ -39,9 +54,16 @@ export default function Home(props: Props) {
         <title>Léa Le Fouest</title>
         <meta name="description" content="Dressing détox by Léa Le Fouest" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/icon.ico" />
       </Head>
       <main className={styles.main}>
+        {sections}
+
+        {/* {props.components.filter(({ page }) => page > 0).map(component => {
+          return <section key={component.name} className={styles.section}>
+            {component.name}
+          </section>
+        })} */}
       </main>
     </>
   )
@@ -51,7 +73,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
   const query = `{
     "components": ${groqQueries.components},
     "profile": ${groqQueries.profile},
-    "home": ${groqQueries.home},
+    "frontage": ${groqQueries.home},
     "why": ${groqQueries.why},
     "solutions": ${groqQueries.solutions},
     "methodologies": ${groqQueries.methodologies},
