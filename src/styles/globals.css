@@ -1,6 +1,7 @@
 :root {
-  --min-width: 100px;
+  --min-width: 400px;
   --max-width: 1100px;
+  --min-height: 400px;
   --border-radius: 12px;
   --font: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
     'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
