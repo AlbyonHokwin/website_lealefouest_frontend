@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import styles from '@/styles/Home.module.css';
 
+import Background from '@/components/elements/Background';
 import Frontage from '@/components/Frontage';
 
 import { GetStaticProps } from 'next';
@@ -17,6 +18,7 @@ import type { PricingProps } from '@/types/PricingProps';
 import type { ExpectationsProps } from '@/types/ExpectationsProps';
 import type { ContactProps } from '@/types/ContactProps';
 import type { OtherMediasProps } from '@/types/OtherMediasProps';
+import type { SanityImage } from '@/types/SanityImage';
 
 type Props = {
   components: Component[];
@@ -29,6 +31,7 @@ type Props = {
   expectations: ExpectationsProps;
   contact: ContactProps;
   otherMedias: OtherMediasProps;
+  background: SanityImage;
 }
 
 export default function Home(props: Props) {
@@ -36,7 +39,7 @@ export default function Home(props: Props) {
   // getKeys(props).forEach(key => console.log(key, props[key]));
 
   const tableComponents: Record<string, JSX.Element> = {
-    "Home": <Frontage {...props.frontage} />,
+    "Home": <Frontage {...props.frontage} firstname={props.profile.firstname} lastname={props.profile.lastname} />,
   }
 
   const sections = props.components
@@ -57,6 +60,7 @@ export default function Home(props: Props) {
         <link rel="icon" href="/icon.ico" />
       </Head>
       <main className={styles.main}>
+        <Background background={props.background}/>
         {sections}
 
         {/* {props.components.filter(({ page }) => page > 0).map(component => {
@@ -81,6 +85,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
     "expectations": ${groqQueries.expectations},
     "contact": ${groqQueries.contact},
     "otherMedias": ${groqQueries.otherMedias},
+    "background": ${groqQueries.background},
   }`
 
   const props: Props = await fetchSanity(query);
