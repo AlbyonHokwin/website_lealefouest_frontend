@@ -29,7 +29,7 @@ export default function ResponsiveImage({ image, objectFit, maxSize, priority = 
                 src={src}
                 alt={image.alt}
                 style={{ objectFit }}
-                sizes="(max-width: 800px) 100vw, 800px"
+                sizes="(max-width: 800px) 100vw, 2000px"
                 fill
                 priority={priority}
             />
