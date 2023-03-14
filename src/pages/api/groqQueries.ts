@@ -11,4 +11,5 @@ export const groqQueries: Record<string, string> = {
     expectations: groq`*[_type == "expectation"]{component->{name, page}, headTitle, expectations[] {text, icon->}}[0]`,
     contact: groq`*[_type == "contact"]{component->{name, page}, headTitle, buttonText}[0]`,
     otherMedias: groq`*[_type == "otherMedia"]{component->{name, page}, headTitle, arrowIcon->,medias[] {name, mainUrl, text, image->, useArrow, socialNetworks[] {name, icon->, url}}}[0]`,
+    background: groq`*[_type == "accessibleImage" && name == "background"]{name, alt, image}[0]`
 };
