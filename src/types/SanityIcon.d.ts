@@ -1,8 +1,8 @@
-import type { SanityImageSource } from '@sanity/image-url/lib/types/types';
+import type { SanityImageObject } from '@sanity/image-url/lib/types/types';
 
 export type SanityIcon = {
     name: string;
-    image: SanityImageSource;
+    image: SanityImageObject;
     alt: string;
     need: boolean;
 }
