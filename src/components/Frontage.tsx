@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from '@/styles/Frontage.module.css';
 
-import Image from './elements/ResponsiveImage';
+import Image from './elements/Image';
 import { PortableText } from '@portabletext/react';
 
 import type { FrontageProps } from '@/types/FrontageProps';

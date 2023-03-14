@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from '@/styles/Image.module.css'
-import Image from 'next/image';
+import NextImage from 'next/image';
 import imageUrlBuilder from '@sanity/image-url';
 import { sanityClient } from '@/pages/api/sanityClient';
 
@@ -14,7 +14,7 @@ type Props = {
     priority?: boolean;
 }
 
-export default function ResponsiveImage({ image, objectFit, maxSize, priority = false }: Props) {
+export default function Image({ image, objectFit, maxSize, priority = false }: Props) {
     const builder: ImageUrlBuilder = imageUrlBuilder(sanityClient);
 
     const src: string = builder.image(image.image)
@@ -25,7 +25,7 @@ export default function ResponsiveImage({ image, objectFit, maxSize, priority = 
 
     return (
         <div className={styles.container}>
-            <Image
+            <NextImage
                 src={src}
                 alt={image.alt}
                 style={{ objectFit }}

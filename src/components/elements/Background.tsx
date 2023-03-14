@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from '@/styles/Background.module.css'
 
-import Image from './ResponsiveImage';
+import Image from './Image';
 import { SanityImage } from '@/types/SanityImage';
 
 type Props = {
