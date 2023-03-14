@@ -5,7 +5,7 @@ import type { SanityImage } from './SanityImage';
 export type SocialNetwork = {
     name: string;
     icon: SanityIcon;
-    url: string;
+    url?: string;
 }
 
 export type Media = {
@@ -14,7 +14,7 @@ export type Media = {
     text: string;
     image: SanityImage;
     useArrow: boolean;
-    socialNetworks: SocialNetwork[];
+    socialNetworks?: SocialNetwork[];
 }
 
 export type OtherMedias = {
