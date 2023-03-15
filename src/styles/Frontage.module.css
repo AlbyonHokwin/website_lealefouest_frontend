@@ -28,9 +28,11 @@
 }
 
 .catchPhrase {
-    font-size: clamp(1em, 8dvmin, 90px);
+    max-width: 100%;
+    font-size: 2rem;
     color: var(--font-color-dark);
     margin-bottom: 30px;
+    overflow-wrap: break-word;
     text-transform: uppercase;
 }
 
@@ -42,7 +44,7 @@
 .name {
     width: 100%;
     padding-top: 30px;
-    font-size: clamp(1em, 6dvmin, 70px);
+    font-size: 1.5rem;
     color: var(--font-color-light);
     position: relative;
 }
@@ -52,7 +54,6 @@
     top: 0;
     right: -30%;
     width: 100dvw;
-    /* height: 2px; */
     border-top: 5px white solid;
 }
 
@@ -77,9 +78,6 @@
     aspect-ratio: 1/1;
     width: 100%;
     max-height: 100%;
-    /* min-width: clamp(200px, 40vmin, 400px);
-    max-width: 40%;
-    height: clamp(200px, 40vmin, 400px); */
     border-radius: 50%;
     border: white 10px solid;
     overflow: hidden;
