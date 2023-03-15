@@ -1,9 +1,9 @@
-import React, { ReactElement } from 'react'
+import React from 'react'
 import styles from '@/styles/Why.module.css';
 
 import WhiteBand from './layouts/WhiteBand';
 import Cause from './elements/Cause';
-import { PortableText, PortableTextComponentProps, PortableTextBlockComponent } from '@portabletext/react';
+import { PortableText } from '@portabletext/react';
 
 import type { WhyProps } from '@/types/WhyProps';
 
