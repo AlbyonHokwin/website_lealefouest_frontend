@@ -31,10 +31,12 @@
     font-size: clamp(1em, 8dvmin, 90px);
     color: var(--font-color-dark);
     margin-bottom: 30px;
+    text-transform: uppercase;
 }
 
 .catchPhrase em {
     line-height: min(30dvmin, 150px);
+    text-transform: capitalize;
 }
 
 .name {

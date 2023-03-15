@@ -20,4 +20,6 @@
 .name {
   max-width: 90%;
   overflow-wrap: break-word;
+  text-align: center;
+  text-transform: uppercase;
 }

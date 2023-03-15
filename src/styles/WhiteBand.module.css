@@ -19,6 +19,7 @@
 .title {
   font-size: 3rem;
   text-align: center;
+  text-transform: uppercase;
 }
 
 .whiteBand {
@@ -34,7 +35,8 @@
   margin-bottom: 5dvh;
 }
 
-.topAccentBar, .bottomAccentBar {
+.topAccentBar,
+.bottomAccentBar {
   --bar-height: 2dvh;
   width: 25%;
   height: var(--bar-height);
