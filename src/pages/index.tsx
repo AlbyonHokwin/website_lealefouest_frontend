@@ -4,6 +4,7 @@ import styles from '@/styles/Home.module.css';
 import Background from '@/components/elements/Background';
 import Frontage from '@/components/Frontage';
 import Why from '@/components/Why';
+import Solutions from '@/components/Solutions';
 
 import { GetStaticProps } from 'next';
 import { fetchSanity } from './api/fetchSanity';
@@ -42,6 +43,7 @@ export default function Home(props: Props) {
   const tableComponents: Record<string, JSX.Element> = {
     "Home": <Frontage {...props.frontage} firstname={props.profile.firstname} lastname={props.profile.lastname} />,
     "Why": <Why {...props.why} />,
+    "Solutions": <Solutions {...props.solutions} />
   }
 
   const sections = props.components
@@ -62,7 +64,7 @@ export default function Home(props: Props) {
         <link rel="icon" href="/icon.ico" />
       </Head>
       <main className={styles.main}>
-        <Background background={props.background}/>
+        <Background background={props.background} />
         {sections}
 
         {/* {props.components.filter(({ page }) => page > 0).map(component => {
