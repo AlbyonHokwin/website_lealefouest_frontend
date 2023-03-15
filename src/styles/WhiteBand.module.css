@@ -36,7 +36,7 @@
 
 .topAccentBar, .bottomAccentBar {
   --bar-height: 2dvh;
-  width: 30%;
+  width: 25%;
   height: var(--bar-height);
   background-color: var(--color-accent);
   position: absolute;
