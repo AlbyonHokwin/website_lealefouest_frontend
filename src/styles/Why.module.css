@@ -1,0 +1,42 @@
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.shockPhraseContainer {
+  width: 45%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.shockPhrase {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  font-size: 1.5rem;
+  overflow-wrap: break-word;
+}
+
+.em {
+  border-bottom: 4px solid black;
+  padding-bottom: 3dvh;
+  margin-bottom: 3dvh;
+  font-size: 5rem
+}
+
+.causes {
+  width: 45%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}

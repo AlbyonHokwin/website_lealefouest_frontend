@@ -1,0 +1,26 @@
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2dvw;
+  margin: 10px 0;
+  padding-right: 5px;
+  --icon-size: clamp(30px, 10dvh, 100px);
+}
+
+.icon {
+  min-width: var(--icon-size);
+  max-width: var(--icon-size);
+  height: var(--icon-size);
+  border-radius: 50%;
+  background-color: var(--color-accent-background);
+  padding: calc(var(--icon-size) / 5);
+  overflow: hidden;
+}
+
+.name {
+  max-width: calc(100% - var(--icon-size) - 10px);
+  overflow-wrap: break-word;
+}
