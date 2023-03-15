@@ -14,6 +14,22 @@ export default function Solutions({ headTitle, picture, solutions, iconBonus, bo
   return (
     <WhiteBand headTitle={headTitle}>
       <div className={styles.container}>
+        <div className={styles.pictureContainer}>
+          <div className={styles.picture}>
+            <Image
+              image={picture}
+              objectFit='cover'
+              maxSize={400}
+            />
+          </div>
+        </div>
+
+        <ul className={styles.solutions}>
+          {solutions.map((solution, i) => <Solution key={i} solution={solution} />)}
+          {bonuses.length && <div className={styles.bonuses}>
+            {bonuses.map((bonus, i) => <Bonus key={i} icon={iconBonus} bonus={bonus} />)}
+          </div>}
+        </ul>
 
       </div>
     </WhiteBand>

@@ -1,0 +1,17 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2dvw;
+  position: relative;
+  --icon-size: 30px;
+}
+
+.icon {
+  min-width: var(--icon-size);
+  max-width: var(--icon-size);
+  height: var(--icon-size);
+  position: absolute;
+  left: calc(-1 * var(--icon-size) - 10px);
+}

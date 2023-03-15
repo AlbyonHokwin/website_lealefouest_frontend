@@ -7,7 +7,8 @@ type Props = {
 
 export default function Solution({ solution }: Props) {
   return (
-    <div className={styles.container}>
-    </div>
-  )
+    <li className={styles.container}>
+      {solution}
+    </li>
+  );
 }
