@@ -5,6 +5,7 @@ import Background from '@/components/elements/Background';
 import Frontage from '@/components/Frontage';
 import Why from '@/components/Why';
 import Solutions from '@/components/Solutions';
+import Methodologies from '@/components/Methodologies';
 
 import { GetStaticProps } from 'next';
 import { fetchSanity } from './api/fetchSanity';
@@ -43,7 +44,8 @@ export default function Home(props: Props) {
   const tableComponents: Record<string, JSX.Element> = {
     "Home": <Frontage {...props.frontage} firstname={props.profile.firstname} lastname={props.profile.lastname} />,
     "Why": <Why {...props.why} />,
-    "Solutions": <Solutions {...props.solutions} />
+    "Solutions": <Solutions {...props.solutions} />,
+    "Methodologies": <Methodologies {...props.methodologies} />,
   }
 
   const sections = props.components
