@@ -21,7 +21,7 @@
   justify-content: flex-start;
   align-items: center;
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   overflow-wrap: break-word;
 }
 
@@ -29,7 +29,7 @@
   border-bottom: 4px solid black;
   padding-bottom: 3dvh;
   margin-bottom: 3dvh;
-  font-size: 5rem
+  font-size: 4rem
 }
 
 .causes {
