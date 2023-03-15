@@ -9,6 +9,9 @@
 
   --font-color-light: white;
   --font-color-dark: black;
+
+  --color-accent: #72CE14;
+  --color-accent-filter: invert(90%) sepia(15%) saturate(4551%) hue-rotate(33deg) brightness(85%) contrast(90%);
 }
 
 * {
@@ -25,7 +28,7 @@ body {
 }
 
 body {
-  color: rgb(var(--font-color-light));
+  color: var(--font-color-dark);
 }
 
 a {
