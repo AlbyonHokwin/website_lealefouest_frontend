@@ -15,7 +15,7 @@ export default function Frontage(props: Props) {
   const { introductory, picture, firstname, lastname } = props;
 
   return (
-    <section className={styles.container}>
+    <div className={styles.container}>
       <div className={styles.content}>
         <div className={styles.left}>
           <PortableText
@@ -45,6 +45,6 @@ export default function Frontage(props: Props) {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 }
