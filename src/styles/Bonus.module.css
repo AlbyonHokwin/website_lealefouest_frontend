@@ -3,7 +3,6 @@
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  gap: 2dvw;
   position: relative;
   --icon-size: 30px;
 }
@@ -12,6 +11,6 @@
   min-width: var(--icon-size);
   max-width: var(--icon-size);
   height: var(--icon-size);
-  position: absolute;
-  left: calc(-1 * var(--icon-size) - 10px);
+  position: relative;
+  left: calc(-1 * var(--icon-size) / 2);
 }

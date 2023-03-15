@@ -5,11 +5,13 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 .pictureContainer {
   flex: 1;
-  height: 100%;
+  min-width: 100px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -27,7 +29,8 @@
 
 .solutions {
   flex: 1;
-  height: 100%;
+  padding-left: 15px;
+  min-width: 200px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
