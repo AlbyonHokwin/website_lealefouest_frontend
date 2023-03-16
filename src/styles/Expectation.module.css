@@ -6,7 +6,7 @@
   justify-content: flex-start;
   align-items: center;
   gap: 2dvw;
-  --icon-size: clamp(15px, 15dvw, 100px);
+  --icon-size: clamp(10px, 10dvmin, 100px);
 }
 
 .icon {
