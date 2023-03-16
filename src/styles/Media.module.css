@@ -1,0 +1,75 @@
+.container {
+  width: 45%;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2dvh;
+}
+
+.containerWithArrow,
+.containerWithoutArrow {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+}
+
+.containerWithoutArrow {
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2dvh;
+}
+
+.imageContainer {
+  aspect-ratio: 1/1;
+  width: clamp(100px, 60%, 400px);
+  min-height: 100px;
+  max-height: 100%;
+  background-color: white;
+  border-radius: 50%;
+  overflow: hidden;
+  padding: 5dvmin;
+}
+
+.textWithArrow {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1dvh;
+  width: clamp(100px, 15dvw, 200px);
+}
+
+.arrowContainer {
+  --icon-size: clamp(30px, 10dvw, 150px);
+  min-width: var(--icon-size);
+  max-width: var(--icon-size);
+  height: var(--icon-size);
+}
+
+.text {
+  color: var(--font-color-light);
+  font-size: 0.8rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.containerWithoutArrow .text {
+  max-width: 70%;
+}
+
+.socialNetworks {
+  width: 100%;
+  align-self: flex-start;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2dvw;
+  flex-wrap: wrap;
+}

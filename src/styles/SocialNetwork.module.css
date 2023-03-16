@@ -1,0 +1,6 @@
+.container {
+  --icon-size: clamp(30px, 5dvw, 80px);
+  min-width: var(--icon-size);
+  max-width: var(--icon-size);
+  height: var(--icon-size);
+}
