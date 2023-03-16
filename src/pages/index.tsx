@@ -2,10 +2,10 @@ import Head from 'next/head';
 import styles from '@/styles/Home.module.css';
 
 import Background from '@/components/elements/Background';
-import Frontage from '@/components/Frontage';
-import Why from '@/components/Why';
-import Solutions from '@/components/Solutions';
-import Methodologies from '@/components/Methodologies';
+import Frontage from '@/components/modules/Frontage';
+import Why from '@/components/modules/Why';
+import Solutions from '@/components/modules/Solutions';
+import Methodologies from '@/components/modules/Methodologies';
 
 import { GetStaticProps } from 'next';
 import { fetchSanity } from './api/fetchSanity';
