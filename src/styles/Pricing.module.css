@@ -1,0 +1,62 @@
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10dvh;
+}
+
+.priceContainer {
+  min-width: 200px;
+  max-width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3dvh;
+}
+
+.price {
+  font-size: 4rem;
+}
+
+.divider {
+  width: 90%;
+  border: 2px solid black;
+}
+
+.motivation {
+  font-size: 1.5rem;
+  text-align: center;
+  overflow-wrap: break-word;
+}
+
+.reasonsContainer {
+  flex: 1;
+  min-width: 200px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2dvw;
+  --icon-size: clamp(30px, 10dvw, 150px);
+  /* --icon-size: 150px; */
+}
+
+.iconContainer {
+  min-width: var(--icon-size);
+  max-width: var(--icon-size);
+  height: var(--icon-size);
+}
+
+.reasons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: max(10px, 2dvh);
+  overflow-wrap: break-word;
+}
