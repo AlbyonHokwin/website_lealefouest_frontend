@@ -1,0 +1,21 @@
+.container {
+  width: 45%;
+  min-width: 200px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2dvw;
+  --icon-size: clamp(15px, 15dvw, 100px);
+}
+
+.icon {
+  min-width: var(--icon-size);
+  max-width: var(--icon-size);
+  height: var(--icon-size);
+}
+
+.text {
+  font-size: 0.9rem;
+  overflow-wrap: break-word;
+}
