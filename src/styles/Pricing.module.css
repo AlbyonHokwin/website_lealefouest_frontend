@@ -43,7 +43,6 @@
   align-items: center;
   gap: 2dvw;
   --icon-size: clamp(30px, 10dvw, 150px);
-  /* --icon-size: 150px; */
 }
 
 .iconContainer {

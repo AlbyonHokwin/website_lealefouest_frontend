@@ -72,12 +72,6 @@ export default function Home(props: Props) {
       <main className={styles.main}>
         <Background background={props.background} />
         {sections}
-
-        {/* {props.components.filter(({ page }) => page > 0).map(component => {
-          return <section key={component.name} className={styles.section}>
-            {component.name}
-          </section>
-        })} */}
       </main>
     </>
   )
