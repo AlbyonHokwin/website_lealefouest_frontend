@@ -6,7 +6,7 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  gap: 10dvh;
+  gap: 8dvh;
 }
 
 .priceContainer {
@@ -20,7 +20,7 @@
 }
 
 .price {
-  font-size: 4rem;
+  font-size: 3rem;
 }
 
 .divider {
