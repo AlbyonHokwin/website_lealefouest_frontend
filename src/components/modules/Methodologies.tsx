@@ -12,7 +12,7 @@ export default function Methodologies({ headTitle, methods }: Props) {
   return (
     <WhiteBand headTitle={headTitle}>
       <div className={styles.container}>
-        {methods.map(method => <Method {...method} />)}
+        {methods.map(method => <Method key={method.name} {...method} />)}
       </div>
     </WhiteBand>
   )
