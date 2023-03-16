@@ -8,7 +8,7 @@ import Solutions from '@/components/modules/Solutions';
 import Methodologies from '@/components/modules/Methodologies';
 import Pricing from '@/components/modules/Pricing';
 import Expectations from '@/components/modules/Expectations';
-
+import Contact from '@/components/modules/Contact';
 import OtherMedias from '@/components/modules/OtherMedias';
 
 import { GetStaticProps } from 'next';
@@ -52,6 +52,7 @@ export default function Home(props: Props) {
     "Methodologies": <Methodologies {...props.methodologies} />,
     "Pricing": <Pricing {...props.pricing} />,
     "Expectations": <Expectations {...props.expectations} />,
+    "Contact": <Contact {...props.contact} />,
     "OtherMedias": <OtherMedias {...props.otherMedias} />,
   }
 
