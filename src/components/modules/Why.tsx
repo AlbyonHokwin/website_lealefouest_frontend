@@ -1,8 +1,8 @@
 import React from 'react'
 import styles from '@/styles/Why.module.css';
 
-import WhiteBand from './layouts/WhiteBand';
-import Cause from './elements/Cause';
+import WhiteBand from '../layouts/WhiteBand';
+import Cause from '../elements/Cause';
 import { PortableText } from '@portabletext/react';
 
 import type { WhyProps } from '@/types/WhyProps';

@@ -1,8 +1,8 @@
 import React from 'react'
 import styles from '@/styles/Methodologies.module.css';
 
-import WhiteBand from './layouts/WhiteBand';
-import Method from './elements/Method';
+import WhiteBand from '../layouts/WhiteBand';
+import Method from '../elements/Method';
 
 import type { MethodologiesProps } from '@/types/MethodologiesProps';
 
