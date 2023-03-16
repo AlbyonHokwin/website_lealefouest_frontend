@@ -20,6 +20,7 @@
 }
 
 .name {
+  font-size: 0.9rem;
   max-width: calc(100% - var(--icon-size) - 10px);
   overflow-wrap: break-word;
 }
