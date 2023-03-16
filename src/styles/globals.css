@@ -16,7 +16,8 @@
   --color-accent-filter: invert(90%) sepia(15%) saturate(4551%) hue-rotate(33deg) brightness(85%) contrast(90%);
   --color-accent-background-filter: invert(100%) sepia(2%) saturate(5216%) hue-rotate(204deg) brightness(119%) contrast(86%);
   --color-light-filter: invert(100%) sepia(1%) saturate(1668%) hue-rotate(321deg) brightness(110%) contrast(100%);
-  font-size: clamp(16px, 4dvmin, 40px);  
+
+  font-size: clamp(12px, 4dvmin, 40px);
 }
 
 * {
