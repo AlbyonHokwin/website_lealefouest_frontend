@@ -13,8 +13,6 @@ type Props = Media & {
 };
 
 export default function Media({ name, mainUrl, text, image, useArrow, socialNetworks, arrowIcon }: Props) {
-  console.log(name, useArrow);
-
   return (
     <div className={styles.container}>
       {useArrow ?
