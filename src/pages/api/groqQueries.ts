@@ -10,6 +10,7 @@ export const groqQueries: Record<string, string> = {
     pricing: groq`*[_type == "pricing"]{component->{name, page}, headTitle, price, motivation, icon->, reasons}[0]`,
     expectations: groq`*[_type == "expectation"]{component->{name, page}, headTitle, expectations[] {text, icon->}}[0]`,
     contact: groq`*[_type == "contact"]{component->{name, page}, headTitle, buttonText}[0]`,
-    otherMedias: groq`*[_type == "otherMedia"]{component->{name, page}, headTitle, arrowIcon->,medias[] {name, mainUrl, text, image->, useArrow, socialNetworks[] {name, icon->, url}}}[0]`,
+    // otherMedias: groq`*[_type == "otherMedia"]{component->{name, page}, headTitle, arrowIcon->,medias[] {name, mainUrl, text, image->{..., image{..., asset->}}, useArrow, socialNetworks[] {name, icon->, url}}}[0]`,
+    otherMedias: groq`*[_type == "otherMedia"]{component->{name, page}, headTitle, arrowIcon->,medias[] {name, mainUrl, text, image->{..., "aspect": image.asset->metadata.dimensions.aspectRatio}, useArrow, socialNetworks[] {name, icon->, url}}}[0]`,
     background: groq`*[_type == "accessibleImage" && name == "background"]{name, alt, image}[0]`
 };

@@ -16,11 +16,19 @@ type Props = {
 
 export default function Image({ image, objectFit, maxSize, priority = false }: Props) {
     const builder: ImageUrlBuilder = imageUrlBuilder(sanityClient);
+    let maxWidth = maxSize;
+    let maxHeight = maxSize;
+
+    if (image.aspect) {
+        image.aspect > 1 ?
+            maxHeight = Math.floor(maxSize / image.aspect) :
+            maxWidth = Math.floor(maxSize * image.aspect);
+    }
 
     const src: string = builder.image(image.image)
         .auto('format')
-        .width(maxSize)
-        .height(maxSize)
+        .width(maxWidth)
+        .height(maxHeight)
         .url();
 
     return (

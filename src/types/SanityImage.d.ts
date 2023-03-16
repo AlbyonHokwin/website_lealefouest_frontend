@@ -5,4 +5,5 @@ export type SanityImage = {
     image: SanityImageObject;
     alt: string;
     caption?: string;
+    aspect?: number;
 }
