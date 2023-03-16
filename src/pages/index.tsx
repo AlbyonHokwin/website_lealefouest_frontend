@@ -9,6 +9,8 @@ import Methodologies from '@/components/modules/Methodologies';
 import Pricing from '@/components/modules/Pricing';
 import Expectations from '@/components/modules/Expectations';
 
+import OtherMedias from '@/components/modules/OtherMedias';
+
 import { GetStaticProps } from 'next';
 import { fetchSanity } from './api/fetchSanity';
 import { groqQueries } from './api/groqQueries';
@@ -50,6 +52,7 @@ export default function Home(props: Props) {
     "Methodologies": <Methodologies {...props.methodologies} />,
     "Pricing": <Pricing {...props.pricing} />,
     "Expectations": <Expectations {...props.expectations} />,
+    "OtherMedias": <OtherMedias {...props.otherMedias} />,
   }
 
   const sections = props.components
