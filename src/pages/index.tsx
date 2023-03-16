@@ -7,6 +7,7 @@ import Why from '@/components/modules/Why';
 import Solutions from '@/components/modules/Solutions';
 import Methodologies from '@/components/modules/Methodologies';
 import Pricing from '@/components/modules/Pricing';
+import Expectations from '@/components/modules/Expectations';
 
 import { GetStaticProps } from 'next';
 import { fetchSanity } from './api/fetchSanity';
@@ -48,6 +49,7 @@ export default function Home(props: Props) {
     "Solutions": <Solutions {...props.solutions} />,
     "Methodologies": <Methodologies {...props.methodologies} />,
     "Pricing": <Pricing {...props.pricing} />,
+    "Expectations": <Expectations {...props.expectations} />,
   }
 
   const sections = props.components
