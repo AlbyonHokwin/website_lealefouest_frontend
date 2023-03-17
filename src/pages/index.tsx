@@ -52,7 +52,7 @@ export default function Home(props: Props) {
     "Methodologies": <Methodologies {...props.methodologies} />,
     "Pricing": <Pricing {...props.pricing} />,
     "Expectations": <Expectations {...props.expectations} />,
-    "Contact": <Contact {...props.contact} />,
+    "Contact": <Contact {...props.contact} ownerEmail={props.profile.email} />,
     "OtherMedias": <OtherMedias {...props.otherMedias} />,
   }
 

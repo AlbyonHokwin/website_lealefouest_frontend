@@ -5,11 +5,14 @@ import Image from '../elements/Image';
 import Comment from '../elements/Comment';
 import ContactForm from './ContactForm';
 
+import type { Profile } from '@/types/Profile';
 import type { ContactProps } from '@/types/ContactProps';
 
-type Props = ContactProps
+type Props = ContactProps & {
+  ownerEmail: Profile['email'];
+}
 
-export default function Contact({ headTitle, picture, buttonText, comments }: ContactProps) {
+export default function Contact({ headTitle, picture, buttonText, comments, ownerEmail }: Props) {
   const [randomIndex, setRandomIndex] = useState<number>(0);
   const [formIsDisplayed, setFormIsDisplayed] = useState<boolean>(false);
 
@@ -29,7 +32,7 @@ export default function Contact({ headTitle, picture, buttonText, comments }: Co
         </div>
 
         {formIsDisplayed && <div className={`${styles.form} ${formIsDisplayed ? styles.visible : styles.hidden}`}>
-          <ContactForm showForm={showForm} />
+          <ContactForm showForm={showForm} ownerEmail={ownerEmail}/>
         </div>}
 
         {comments && !formIsDisplayed &&
