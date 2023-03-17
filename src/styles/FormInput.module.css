@@ -1,5 +1,6 @@
 .container {
   width: 100%;
+  min-width: 150px;
   position: relative;
   display: flex;
   flex-direction: row;
@@ -10,6 +11,7 @@
   justify-content: flex-start;
   align-items: flex-start;
   gap: 2px;
+  text-overflow: ellipsis;
 }
 
 
@@ -58,6 +60,7 @@
 
 .label {
   position: absolute;
+  max-width: calc(100% - 2 * 25px);
   left: 20px;
   top: 28px;
   translate: 0 -50%;
@@ -66,6 +69,9 @@
   font-size: 16px;
   opacity: 0.5;
   transition: top 0.3s, color 0.3s;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 :is(.input:focus, .textarea:focus, .filled)~.label {
@@ -75,11 +81,15 @@
 }
 
 .errorMessage {
+  max-width: calc(100% - 2 * 20px);
   position: absolute;
   left: 20px;
   bottom: 2px;
   color: red;
   font-size: 16px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .errorIcon {
