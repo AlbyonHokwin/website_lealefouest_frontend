@@ -35,13 +35,13 @@
     text-transform: uppercase;
 }
 
-@media (max-width: 690px) {
+@media (max-width: 380px) {
     .catchPhrase {
         font-size: 1.5rem;
     }
 }
 
-@media (max-width: 380px) {
+/* @media (max-width: 380px) {
     .catchPhrase {
         overflow-wrap: break-word;
         word-wrap: break-word;
@@ -52,7 +52,7 @@
         -webkit-hyphens: auto;
         hyphens: auto;
     }
-}
+} */
 
 .catchPhrase em {
     line-height: max(20dvmin, 50px);
