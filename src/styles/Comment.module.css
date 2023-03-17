@@ -4,7 +4,7 @@
   display: grid;
   grid-template-columns: var(--icon-size) minmax(100px, auto);
   grid-template-rows: var(--icon-size) auto auto;
-  font-size: 0.6rem;
+  font-size: max(12px, 0.6rem);
   background-color: white;
   padding: 0.5rem 1rem;
   border-radius: var(--border-radius);
