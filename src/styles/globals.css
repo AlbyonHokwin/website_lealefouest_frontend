@@ -55,4 +55,13 @@ a {
   color: inherit;
   text-decoration: none;
   cursor: pointer;
+  transition: scale 0.3s;
+}
+
+a:hover {
+  scale: 1.1;
+}
+
+a:active {
+  scale: 0.9;
 }
