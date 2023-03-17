@@ -7,27 +7,26 @@ import SpinnerIcon from '../elements/SpinnerIcon';
 import { useForm, SubmitHandler, FormProvider } from 'react-hook-form';
 import emailjs from '@emailjs/browser';
 
-type Inputs = {
-  firstname: string;
-  lastname: string;
-  address: string;
-  zipCode: string;
-  city: string;
-  phoneNumber: string;
-  email: string;
-  dressingSize: '' | 'small' | 'medium' | 'large';
-};
+import type { Profile } from '@/types/Profile';
+import type { FormInputs, DressingSize } from '@/types/FormInputs';
 
-type Props = {
-  showForm: () => void;
-}
+const dressingSizes: DressingSize[] = [
+  { label: 'Petit', value: 'small' },
+  { label: 'Moyen', value: 'medium' },
+  { label: 'Grand', value: 'large' },
+];
 
 const EMAIL_REGEX: RegExp = /(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/i;
 const FRENCHPHONENUMBER_REGEX: RegExp = /^(?:(?:\+|00)33|0)\s*[1-9](?:[\s.-]*\d{2}){4}$/;
 
-export default function ContactForm({ showForm }: Props) {
+type Props = {
+  showForm: () => void;
+  ownerEmail: Profile['email'];
+}
+
+export default function ContactForm({ showForm, ownerEmail }: Props) {
   const [isLoading, setIsLoading] = useState<boolean>(false);
-  const formMethods = useForm<Inputs>({
+  const formMethods = useForm<FormInputs>({
     defaultValues: {
       firstname: '',
       lastname: '',
@@ -44,8 +43,12 @@ export default function ContactForm({ showForm }: Props) {
 
   const errorMessageRequired: string = 'Requis !';
 
-  const onSubmit: SubmitHandler<Inputs> = data => {
+  const onSubmit: SubmitHandler<FormInputs> = data => {
+    console.log(`submit at ${ownerEmail}`);
     console.log(data);
+    const dressingSizeLabel = dressingSizes.find(size => size.value === data.dressingSize)?.label;
+
+    const params = {ownerEmail, ...data, dressingSize: dressingSizeLabel}
     // setIsLoading(true);
     // const params = { myEmail, ...data };
     // emailjs.send(process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID, process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID, params, process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY)
@@ -156,11 +159,7 @@ export default function ContactForm({ showForm }: Props) {
             formOptions={{ required: true }}
             baseId='radio-dressingSize'
             name='Taille du dressing'
-            radios={[
-              { label: 'Petit', value: 'small' },
-              { label: 'Moyen', value: 'medium' },
-              { label: 'Grand', value: 'large' },
-            ]}
+            radios={dressingSizes}
             errorMessageRequired={errorMessageRequired}
           />
         </div>
