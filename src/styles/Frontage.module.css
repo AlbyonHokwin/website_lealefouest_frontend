@@ -6,6 +6,7 @@
     align-items: center;
     overflow-x: hidden;
     --line-size: clamp(5px, 1dvmin, 10px);
+    font-family: var(--font-serif);
 }
 
 .content {
@@ -29,30 +30,18 @@
 }
 
 .catchPhrase {
-    font-size: 2rem;
+    font-size: 2.5rem;
+    font-weight: normal;
     color: var(--font-color-dark);
     margin-bottom: 30px;
     text-transform: uppercase;
 }
 
-@media (max-width: 380px) {
+@media (max-width: 420px) {
     .catchPhrase {
         font-size: 1.5rem;
     }
 }
-
-/* @media (max-width: 380px) {
-    .catchPhrase {
-        overflow-wrap: break-word;
-        word-wrap: break-word;
-        -ms-word-break: break-all;
-        word-break: break-word;
-        -ms-hyphens: auto;
-        -moz-hyphens: auto;
-        -webkit-hyphens: auto;
-        hyphens: auto;
-    }
-} */
 
 .catchPhrase em {
     line-height: max(20dvmin, 50px);
@@ -62,8 +51,10 @@
 .name {
     width: 100%;
     padding-top: 30px;
-    font-size: 1.5rem;
+    font-size: 2rem;
     color: var(--font-color-light);
+    font-weight: bold;
+    white-space: nowrap;
     position: relative;
 }
 

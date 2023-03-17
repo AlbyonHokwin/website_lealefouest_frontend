@@ -23,15 +23,17 @@
   justify-content: flex-start;
   align-items: center;
   text-align: center;
-  font-size: 1.3rem;
-  overflow-wrap: break-word;
+  font-size: 1.2rem;
+  font-weight: normal;
 }
 
 .em {
-  border-bottom: 4px solid black;
+  border-bottom: 3px solid black;
   padding-bottom: 3dvh;
   margin-bottom: 3dvh;
-  font-size: 4rem
+  font-size: 10dvh;
+  font-family: var(--font-serif);
+  font-weight: bold;
 }
 
 .causes {
