@@ -12,6 +12,7 @@ type Props = InputHTMLAttributes<HTMLInputElement> & TextareaHTMLAttributes<HTML
   id: string;
   errorMessageRequired?: string;
   errorMessagePattern?: string;
+  errorMessageLength?: string;
   isTextarea?: boolean;
 }
 
@@ -22,6 +23,7 @@ export default function FormInput({
   id,
   errorMessageRequired,
   errorMessagePattern = '',
+  errorMessageLength = '',
   isTextarea = false,
   ...rest
 }: Props) {
@@ -46,11 +48,13 @@ export default function FormInput({
       <label htmlFor={id} className={styles.label}>{label}</label>
       {error && <div className={styles.errorMessage}>
         {
-          error?.type === 'required' ?
+          error.type === 'required' ?
             errorMessageRequired :
-            error?.type === 'pattern' ?
+            error.type === 'pattern' ?
               errorMessagePattern :
-              ''
+              error.type === 'maxLength' ?
+                errorMessageLength :
+                ''
         }
       </div>}
     </div>
