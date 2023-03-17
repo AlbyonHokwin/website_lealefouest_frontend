@@ -42,9 +42,6 @@ type Props = {
 }
 
 export default function Home(props: Props) {
-  // const getKeys = Object.keys as <T extends object>(obj: T) => Array<keyof T>
-  // getKeys(props).forEach(key => console.log(key, props[key]));
-
   const tableComponents: Record<string, JSX.Element> = {
     "Home": <Frontage {...props.frontage} firstname={props.profile.firstname} lastname={props.profile.lastname} />,
     "Why": <Why {...props.why} />,
