@@ -4,20 +4,19 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  gap: 5px;
+  gap: 2dvh;
   background-color: transparent;
   padding: 5px;
   position: relative;
 }
 
 .group {
-  margin-bottom: 10px;
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 5px;
+  gap: max(0.5dvh, 3px);
 }
 
 .dualInputs {
@@ -63,14 +62,21 @@
   scale: 0.95;
 }
 
+.button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
 .closeButton {
   position: absolute;
   top: 0;
   right: 0;
-  translate: -5px calc(-50% - 20px);
+  translate: -5px -100%;
   background-color: transparent;
   border: none;
-  color: var(--font-color-light);
+  color: red;
+  opacity: 0.5;
   font-size: 1.5rem;
   font-weight: bold;
   text-transform: uppercase;
@@ -78,9 +84,15 @@
 }
 
 .closeButton:hover {
-  opacity: 0.7;
+  opacity: 1;
 }
 
 .closeButton:active {
-  scale: 0.95;
+  scale: 0.9;
+}
+
+.closeButton:disabled {
+  opacity: 0;
+  cursor: not-allowed;
+  pointer-events: none;
 }
