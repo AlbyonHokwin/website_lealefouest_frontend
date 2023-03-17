@@ -26,9 +26,9 @@ export default function Solutions({ headTitle, picture, solutions, iconBonus, bo
 
         <ul className={styles.solutions}>
           {solutions.map((solution, i) => <Solution key={i} solution={solution} />)}
-          {bonuses.length && <div className={styles.bonuses}>
-            {bonuses.map((bonus, i) => <Bonus key={i} icon={iconBonus} bonus={bonus} />)}
-          </div>}
+          {bonuses.length &&
+            bonuses.map((bonus, i) => <Bonus key={i} icon={iconBonus} bonus={bonus} />)
+          }
         </ul>
 
       </div>
