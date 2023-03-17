@@ -16,14 +16,18 @@
   background-color: white;
   border-radius: var(--border-radius);
   border: 2px solid white;
-  padding: 0 15px;
-  position: relative;
+  padding: 10px 15px;
+  padding-bottom: 0;
+}
+
+.fieldset:has(.error) {
+  border-color: red;
 }
 
 .legend {
   float: left;
   width: 100%;
-  font-size: 20px;
+  font-size: 16px;
 }
 
 .radios {
@@ -34,7 +38,7 @@
 }
 
 .radio {
-  font-size: 20px;
+  font-size: 16px;
   color: var(--font-color-dark);
   display: flex;
   flex-direction: row;
@@ -75,7 +79,7 @@
 }
 
 .error {
-  box-shadow: 0 0 0 2px red;
+  box-shadow: 0 0 0 1px red;
 }
 
 .errorMessage {
