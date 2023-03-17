@@ -11,6 +11,7 @@
   --font-color-dark: black;
 
   --color-accent: #72CE14;
+  --color-accent-rgb: 114, 206, 20;
   --color-accent-background: #EDEDED;
 
   --color-accent-filter: invert(90%) sepia(15%) saturate(4551%) hue-rotate(33deg) brightness(85%) contrast(90%);
