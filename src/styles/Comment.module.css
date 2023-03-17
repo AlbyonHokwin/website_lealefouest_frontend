@@ -1,0 +1,30 @@
+.container {
+  --icon-size: clamp(15px, 10dvmin, 70px);
+  width: clamp(150px, 80%, 900px);
+  display: grid;
+  grid-template-columns: var(--icon-size) minmax(100px, auto);
+  grid-template-rows: var(--icon-size) auto auto;
+  font-size: 0.6rem;
+  background-color: white;
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius);
+}
+
+.icon {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+.text {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  font-style: italic;
+}
+
+.author {
+  grid-column: 2 / 3;
+  grid-row: 3 / 4;
+  text-align: center;
+  padding: 10px 0;
+  border-bottom: 2px solid black;
+}
