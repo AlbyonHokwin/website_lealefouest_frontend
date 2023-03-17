@@ -30,9 +30,9 @@ export default function Pricing({ headTitle, price, motivation, icon, reasons }:
             <Icon icon={icon} objectFit='contain' useAccentColor />
           </div>
 
-          <div className={styles.reasons}>
+          <ul className={styles.reasons}>
             {reasons.map((reason, i) => <Reason key={i} reason={reason} />)}
-          </div>
+          </ul>
         </div>
       </div>
     </WhiteBand>
