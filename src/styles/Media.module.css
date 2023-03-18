@@ -1,6 +1,6 @@
 .container {
   width: 45%;
-  min-width: 300px;
+  min-width: 250px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -8,26 +8,37 @@
   gap: 2dvh;
 }
 
-.containerWithArrow,
-.containerWithoutArrow {
+.containerWithArrow {
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-start;
-  position: relative;
+  padding-left: 10%;
 }
 
 .containerWithoutArrow {
+  width: 100%;
+  display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   gap: 2dvh;
 }
 
+.links {
+  width: 66%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  gap: max(2dvh, 10px);
+}
+
 .imageContainer {
   aspect-ratio: 1/1;
-  width: clamp(100px, 60%, 400px);
+  width: clamp(100px, 100%, 400px);
   min-height: 100px;
   max-height: 100%;
   background-color: white;
@@ -36,16 +47,20 @@
 }
 
 .textWithArrow {
+  position: absolute;
+  top: 0;
+  right: 0;
+  translate: 100% 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
   gap: 1dvh;
-  width: clamp(100px, 15dvw, 200px);
+  width: 50%;
 }
 
 .arrowContainer {
-  --icon-size: clamp(30px, 10dvw, 150px);
+  --icon-size: 4rem;
   min-width: var(--icon-size);
   max-width: var(--icon-size);
   height: var(--icon-size);
@@ -53,22 +68,17 @@
 
 .text {
   color: var(--font-color-light);
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   text-align: center;
   text-transform: uppercase;
-}
-
-.containerWithoutArrow .text {
-  max-width: 70%;
+  width: 100%;
 }
 
 .socialNetworks {
   width: 100%;
-  align-self: flex-start;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  gap: 2dvw;
   flex-wrap: wrap;
 }

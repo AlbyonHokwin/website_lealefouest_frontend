@@ -17,37 +17,45 @@ export default function Media({ name, mainUrl, text, image, useArrow, socialNetw
     <div className={styles.container}>
       {useArrow ?
         <div className={styles.containerWithArrow}>
-          <a href={mainUrl} className={styles.imageContainer}>
-            <Image image={image} objectFit='contain' maxSize={400} />
-          </a>
+          <div className={styles.links}>
+            <a href={mainUrl} className={styles.imageContainer}>
+              <Image image={image} objectFit='contain' maxSize={400} />
+            </a>
 
-          <div className={styles.textWithArrow}>
-            <h4 className={styles.text}>
-              {text}
-            </h4>
+            <div className={styles.socialNetworks}>
+              {socialNetworks && socialNetworks.map((socialNetwork, i) => <SocialNetwork key={i} {...socialNetwork} />)}
+            </div>
 
-            <div className={styles.arrowContainer}>
-              <Icon icon={arrowIcon} objectFit='contain'
-                filter='var(--color-light-filter)'
-              />
+            <div className={styles.textWithArrow}>
+              <h4 className={styles.text}>
+                {text}
+              </h4>
+
+              <div className={styles.arrowContainer}>
+                <Icon icon={arrowIcon} objectFit='contain'
+                  filter='var(--color-light-filter)'
+                />
+              </div>
             </div>
           </div>
         </div> :
 
         <div className={styles.containerWithoutArrow}>
-          <h4 className={styles.text}>
-            {text}
-          </h4>
+          <div className={styles.links}>
+            <h4 className={styles.text}>
+              {text}
+            </h4>
 
-          <a href={mainUrl} className={styles.imageContainer}>
-            <Image image={image} objectFit='contain' maxSize={400} />
-          </a>
+            <a href={mainUrl} className={styles.imageContainer}>
+              <Image image={image} objectFit='cover' maxSize={400} />
+            </a>
+
+            <div className={styles.socialNetworks}>
+              {socialNetworks && socialNetworks.map((socialNetwork, i) => <SocialNetwork key={i} {...socialNetwork} />)}
+            </div>
+          </div>
         </div>
       }
-
-      <div className={styles.socialNetworks}>
-        {socialNetworks && socialNetworks.map((socialNetwork, i) => <SocialNetwork key={i} {...socialNetwork} />)}
-      </div>
     </div>
   );
 }
