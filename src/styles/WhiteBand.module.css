@@ -5,7 +5,6 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  overflow-x: hidden;
   --band-height: 50dvh;
 }
 
@@ -56,5 +55,5 @@
 .content {
   width: clamp(var(--min-width), 100%, var(--max-width));
   height: 100%;
-  overflow-y: auto;
+  overflow: auto;
 }
