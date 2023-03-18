@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '@/styles/Pricing.module.css'
+import styles from '@/styles/Pricing.module.css';
 
 import WhiteBand from '../layouts/WhiteBand';
 import Icon from '../elements/Icon';

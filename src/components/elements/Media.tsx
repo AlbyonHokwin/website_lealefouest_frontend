@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '@/styles/Media.module.css'
+import styles from '@/styles/Media.module.css';
 
 import SocialNetwork from './SocialNetwork';
 import Image from './Image';

@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '@/styles/Image.module.css'
+import styles from '@/styles/Image.module.css';
 import NextImage from 'next/image';
 import imageUrlBuilder from '@sanity/image-url';
 import { sanityClient } from '@/pages/api/sanityClient';

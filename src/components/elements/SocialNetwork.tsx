@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '@/styles/SocialNetwork.module.css'
+import styles from '@/styles/SocialNetwork.module.css';
 
 import Icon from './Icon';
 

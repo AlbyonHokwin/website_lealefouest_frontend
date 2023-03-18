@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import styles from '@/styles/Why.module.css';
 
 import WhiteBand from '../layouts/WhiteBand';

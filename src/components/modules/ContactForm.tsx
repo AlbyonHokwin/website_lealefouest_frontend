@@ -44,8 +44,6 @@ export default function ContactForm({ showForm, ownerEmail }: Props) {
   const errorMessageRequired: string = 'Requis !';
 
   const onSubmit: SubmitHandler<FormInputs> = data => {
-    // console.log(`submit at ${ownerEmail}`);
-    // console.log(data);
     setIsLoading(true);
     const dressingSizeLabel = dressingSizes.find(size => size.value === data.dressingSize)?.label;
 
