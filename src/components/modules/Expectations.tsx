@@ -1,5 +1,5 @@
-import React from 'react'
-import styles from '@/styles/Why.module.css';
+import React from 'react';
+import styles from '@/styles/Expectations.module.css';
 
 import WhiteBand from '../layouts/WhiteBand';
 import Expectation from '../elements/Expectation';
