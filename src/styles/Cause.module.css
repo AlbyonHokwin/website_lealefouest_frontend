@@ -6,7 +6,7 @@
   align-items: center;
   gap: 2dvw;
   padding-right: 5px;
-  --icon-size: clamp(30px, 10dvh, 100px);
+  --icon-size: 2.5rem;
 }
 
 .icon {
