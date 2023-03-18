@@ -44,22 +44,24 @@ export default function ContactForm({ showForm, ownerEmail }: Props) {
   const errorMessageRequired: string = 'Requis !';
 
   const onSubmit: SubmitHandler<FormInputs> = data => {
-    console.log(`submit at ${ownerEmail}`);
-    console.log(data);
+    // console.log(`submit at ${ownerEmail}`);
+    // console.log(data);
+    setIsLoading(true);
     const dressingSizeLabel = dressingSizes.find(size => size.value === data.dressingSize)?.label;
 
-    const params = {ownerEmail, ...data, dressingSize: dressingSizeLabel}
-    // setIsLoading(true);
-    // const params = { myEmail, ...data };
-    // emailjs.send(process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID, process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID, params, process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY)
-    //     .then(result => {
-    //         if (result.text === 'OK') {
-    //             alert("Votre message a bien été envoyé.");
-    //             reset();
-    //             setIsLoading(false);
-    //         }
-    //     })
-    //     .catch(() => alert("Une erreur s'est produite durant l'envoi, veuillez réessayer."));
+    const params = { ownerEmail, ...data, dressingSize: dressingSizeLabel }
+    emailjs.send(process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || '', process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || '', params, process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY)
+      .then(result => {
+        if (result.text === 'OK') {
+          alert("Votre message a bien été envoyé.");
+          reset();
+          setIsLoading(false);
+        }
+      })
+      .catch(() => {
+        alert("Une erreur s'est produite durant l'envoi, veuillez réessayer.");
+        setIsLoading(false);
+      });
   };
 
   return (
