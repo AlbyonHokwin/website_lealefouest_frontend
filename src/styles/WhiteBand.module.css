@@ -32,7 +32,7 @@
   justify-content: flex-start;
   align-items: center;
   position: relative;
-  padding: 3%;
+  padding: max(3%, 20px);
   margin-bottom: 3dvh;
 }
 
