@@ -14,14 +14,12 @@ export default function Solutions({ headTitle, picture, solutions, iconBonus, bo
   return (
     <WhiteBand headTitle={headTitle}>
       <div className={styles.container}>
-        <div className={styles.pictureContainer}>
-          <div className={styles.picture}>
-            <Image
-              image={picture}
-              objectFit='cover'
-              maxSize={400}
-            />
-          </div>
+        <div className={styles.picture}>
+          <Image
+            image={picture}
+            objectFit='cover'
+            maxSize={400}
+          />
         </div>
 
         <ul className={styles.solutions}>
