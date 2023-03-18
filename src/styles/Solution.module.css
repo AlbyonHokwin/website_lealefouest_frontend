@@ -1,4 +1,5 @@
 .container {
   font-size: 0.9rem;
-  list-style: inside;
+  list-style: disc;
+  margin: 5px 0;
 }

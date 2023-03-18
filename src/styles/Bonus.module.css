@@ -1,16 +1,17 @@
-.container {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
+.bonus {
+  font-size: 1rem;
+  list-style: none;
+  margin: 5px 0;
   position: relative;
-  --icon-size: 30px;
 }
 
 .icon {
+  --icon-size: 1.3rem;
   min-width: var(--icon-size);
   max-width: var(--icon-size);
   height: var(--icon-size);
-  position: relative;
-  left: calc(-1 * var(--icon-size) / 2);
+  position: absolute;
+  top: 50%;
+  left: 0;
+  translate: calc(-100% - 10px) -50%;
 }

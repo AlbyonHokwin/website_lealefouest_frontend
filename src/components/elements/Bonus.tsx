@@ -14,7 +14,7 @@ type Props = {
 
 export default function Bonus({ bonus, icon }: Props) {
   return (
-    <li className={styles.container}>
+    <li className={styles.bonus}>
       <div className={styles.icon}>
         <Icon
           icon={icon}
