@@ -36,7 +36,7 @@ export default function Image({ image, objectFit, maxSize, priority = false }: P
             <NextImage
                 src={src}
                 alt={image.alt}
-                style={{ objectFit }}
+                style={{ objectFit, padding: objectFit === 'cover' ? 0 : '5dvmin' }}
                 sizes="(max-width: 800px) 100vw, 2000px"
                 fill
                 priority={priority}
