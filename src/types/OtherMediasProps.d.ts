@@ -13,6 +13,7 @@ export type Media = {
     mainUrl: string;
     text: string;
     image: SanityImage;
+    contained: boolean;
     useArrow: boolean;
     socialNetworks?: SocialNetwork[];
 }
