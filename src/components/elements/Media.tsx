@@ -12,14 +12,16 @@ type Props = Media & {
   arrowIcon: SanityIcon
 };
 
-export default function Media({ name, mainUrl, text, image, useArrow, socialNetworks, arrowIcon }: Props) {
+export default function Media({ name, mainUrl, text, image, contained, useArrow, socialNetworks, arrowIcon }: Props) {
   return (
     <div className={styles.container}>
       {useArrow ?
         <div className={styles.containerWithArrow}>
           <div className={styles.links}>
             <a href={mainUrl} className={styles.imageContainer}>
-              <Image image={image} objectFit='contain' maxSize={400} />
+              <Image image={image} objectFit={contained ? 'contain' : 'cover'} maxSize={400}
+                toAddToAlt={`Link to ${name}`}
+              />
             </a>
 
             <div className={styles.socialNetworks}>
@@ -47,7 +49,9 @@ export default function Media({ name, mainUrl, text, image, useArrow, socialNetw
             </h4>
 
             <a href={mainUrl} className={styles.imageContainer}>
-              <Image image={image} objectFit='cover' maxSize={400} />
+              <Image image={image} objectFit={contained ? 'contain' : 'cover'} maxSize={400}
+                toAddToAlt={`Link to ${name}`}
+              />
             </a>
 
             <div className={styles.socialNetworks}>

@@ -12,9 +12,10 @@ type Props = {
     objectFit: React.CSSProperties['objectFit'];
     maxSize: number;
     priority?: boolean;
+    toAddToAlt?: string;
 }
 
-export default function Image({ image, objectFit, maxSize, priority = false }: Props) {
+export default function Image({ image, objectFit, maxSize, priority = false, toAddToAlt = '' }: Props) {
     const builder: ImageUrlBuilder = imageUrlBuilder(sanityClient);
     let maxWidth = maxSize;
     let maxHeight = maxSize;
@@ -35,7 +36,7 @@ export default function Image({ image, objectFit, maxSize, priority = false }: P
         <div className={styles.container}>
             <NextImage
                 src={src}
-                alt={image.alt}
+                alt={`${image.alt}; ${toAddToAlt}`}
                 style={{ objectFit, padding: objectFit === 'cover' ? 0 : '5dvmin' }}
                 sizes="(max-width: 800px) 100vw, 2000px"
                 fill
