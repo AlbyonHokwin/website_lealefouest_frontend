@@ -1,4 +1,6 @@
 :root {
+  color-scheme: only light !important;
+
   --min-width: 200px;
   --max-width: 1600px;
   --min-height: 300px;
