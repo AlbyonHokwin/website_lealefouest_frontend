@@ -8,3 +8,12 @@
   flex-wrap: wrap;
   gap: 3dvh;
 }
+
+@media (max-aspect-ratio: 2/3) {
+  .container {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+}

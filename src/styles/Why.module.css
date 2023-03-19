@@ -6,7 +6,7 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  gap: 5dvh
+  gap: 5dvh;
 }
 
 .shockPhraseContainer {
@@ -44,4 +44,27 @@
   justify-content: space-between;
   align-items: flex-start;
   gap: 2dvh;
+}
+
+@media (max-aspect-ratio: 2/3) {
+  .container {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+
+  .shockPhraseContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid black;
+  }
+
+  .causes {
+    width: 90%;
+    flex: 1;
+  }
 }

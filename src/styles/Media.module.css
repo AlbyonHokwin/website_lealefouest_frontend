@@ -82,3 +82,13 @@
   align-items: center;
   flex-wrap: wrap;
 }
+
+@media (max-aspect-ratio: 2/3) {
+  .container {
+    width: 90%;
+  }
+
+  .imageContainer {
+    width: 100%;
+  }
+}

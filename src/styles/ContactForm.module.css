@@ -16,7 +16,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: max(0.5dvh, 3px);
+  gap: 5px;
 }
 
 .dualInputs {
@@ -95,4 +95,33 @@
   opacity: 0;
   cursor: not-allowed;
   pointer-events: none;
+}
+
+@media (max-aspect-ratio: 2/3) {
+  .form {
+    width: 90%;
+  }
+
+  .dualInputs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+
+  .childInputFlex1 {
+    flex: 1;
+    width: 100%;
+  }
+
+  .childInputFlex2 {
+    flex: 1;
+    width: 100%;
+  }
+
+  .childInputFlex3 {
+    flex: 1;
+    width: 100%;
+  }
 }

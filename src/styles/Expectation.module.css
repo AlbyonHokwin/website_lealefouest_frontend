@@ -17,5 +17,15 @@
 
 .text {
   font-size: 0.9rem;
-  overflow-wrap: break-word;
+}
+
+@media (max-aspect-ratio: 2/3) {
+  .container {
+    width: 90%;
+    gap: 1rem;
+  }
+
+  .text {
+    font-size: 1rem;
+  }
 }

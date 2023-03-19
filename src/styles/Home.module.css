@@ -13,3 +13,9 @@
     min-height: 100%;
     scroll-snap-align: start;
 }
+
+@media (max-aspect-ratio: 2/3) {
+    .main {
+        scroll-snap-type: y proximity;
+    }
+}

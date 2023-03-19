@@ -85,3 +85,27 @@
 .errorIcon {
   margin-right: 5px;
 }
+
+@media (max-aspect-ratio: 2/3) {
+
+  .input,
+  .textarea {
+    font-size: 0.7rem;
+  }
+
+  .label {
+    font-size: 0.5rem;
+  }
+
+  :is(.input:focus,
+    .textarea:focus,
+    .input:autofill,
+    .input.input:-webkit-autofill,
+    .filled)~.label {
+    font-size: 0.5rem;
+  }
+
+  .errorMessage {
+    font-size: 0.5rem;
+  }
+}

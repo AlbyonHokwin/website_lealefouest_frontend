@@ -3,3 +3,10 @@
   list-style: disc;
   margin: 5px 0;
 }
+
+@media (max-aspect-ratio: 2/3) {
+  .container {
+    font-size: 1rem;
+    margin: 10px 0;
+    }
+}

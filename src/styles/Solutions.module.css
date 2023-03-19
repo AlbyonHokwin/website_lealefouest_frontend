@@ -26,3 +26,23 @@
   align-items: flex-start;
   gap: 1rem;
 }
+
+@media (max-aspect-ratio: 2/3) {
+  .container {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+    align-self: center;
+  }
+
+  .picture {
+    min-height: 200px;
+    min-width: unset;
+    max-width: unset;
+  }
+
+  .solutions {
+    flex: 2;
+  }
+}

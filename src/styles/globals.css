@@ -21,6 +21,12 @@
   font-size: clamp(12px, 2.5dvw, 40px);
 }
 
+@media (max-aspect-ratio: 2/3) {
+  :root {
+    font-size: clamp(12px, 5dvw, 50px);
+  }
+}
+
 * {
   box-sizing: border-box;
   padding: 0;

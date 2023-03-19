@@ -4,3 +4,9 @@
   max-width: var(--icon-size);
   height: var(--icon-size);
 }
+
+@media (max-aspect-ratio: 2/3) {
+  .container {
+    --icon-size: 2.5rem;
+  }
+}
