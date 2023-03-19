@@ -32,7 +32,8 @@
   align-items: center;
   position: relative;
   padding: max(3%, 20px);
-  margin-bottom: 3vh;
+  margin-bottom: 270px;
+  margin-bottom: 3dvh;
 }
 
 .topAccentBar,
