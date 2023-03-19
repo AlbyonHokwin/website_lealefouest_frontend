@@ -1,93 +1,125 @@
 .container {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow-x: hidden;
-    --line-size: clamp(5px, 1dvmin, 10px);
-    font-family: var(--font-serif);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+  --line-size: clamp(5px, 1dvmin, 10px);
+  font-family: var(--font-serif);
 }
 
 .content {
-    width: clamp(var(--min-width), 90%, var(--max-width));
-    height: max(90%, var(--min-height));
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    padding: 20px;
+  width: clamp(var(--min-width), 90%, var(--max-width));
+  height: max(90%, var(--min-height));
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
 }
 
 .left {
-    width: 60%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
+  width: 60%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 .catchPhrase {
-    font-size: 2.5rem;
-    font-weight: normal;
-    color: var(--font-color-dark);
-    margin-bottom: 30px;
-    text-transform: uppercase;
+  font-size: 2.5rem;
+  font-weight: normal;
+  color: var(--font-color-dark);
+  margin-bottom: 30px;
+  text-transform: uppercase;
 }
 
 @media (max-width: 420px) {
-    .catchPhrase {
-        font-size: 1.5rem;
-    }
+  .catchPhrase {
+    font-size: 1.5rem;
+  }
 }
 
 .catchPhrase em {
-    line-height: max(20dvmin, 50px);
-    text-transform: capitalize;
+  line-height: max(20dvmin, 50px);
+  text-transform: none;
 }
 
 .name {
-    width: 100%;
-    padding-top: 30px;
-    font-size: 2rem;
-    color: var(--font-color-light);
-    font-weight: bold;
-    white-space: nowrap;
-    position: relative;
+  width: 100%;
+  padding-top: 30px;
+  font-size: 2rem;
+  color: var(--font-color-light);
+  font-weight: bold;
+  white-space: nowrap;
+  position: relative;
 }
 
 .whiteLine {
-    position: absolute;
-    top: 0;
-    right: -30%;
-    width: 100dvw;
-    border-top: var(--line-size) white solid;
+  position: absolute;
+  top: 0;
+  right: -30%;
+  width: 100dvw;
+  border-top: var(--line-size) white solid;
 }
 
 .verticalLine {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    height: 20dvmin;
-    width: 2px;
-    border-right: var(--line-size) white solid;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 20dvmin;
+  width: 2px;
+  border-right: var(--line-size) white solid;
 }
 
 .right {
-    width: 40%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 40%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .image {
-    aspect-ratio: 1/1;
-    width: 100%;
-    max-height: 100%;
-    border-radius: 50%;
-    border: white var(--line-size) solid;
-    overflow: hidden;
+  aspect-ratio: 1/1;
+  width: 100%;
+  max-height: 100%;
+  border-radius: 50%;
+  border: white var(--line-size) solid;
+  overflow: hidden;
+}
+
+@media (max-aspect-ratio: 2/3) {
+  .content {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .left {
+    width: 90%;
+    height: auto;
+  }
+
+  .catchPhrase {
+    color: var(--font-color-light);
+    font-size: 2rem;
+  }
+
+  .right {
+    width: 90%;
+    height: unset;
+    flex: 1;
+  }
+
+  .image {
+    flex: 1;
+    width: auto;
+    max-height: 40dvh;
+  }
 }
