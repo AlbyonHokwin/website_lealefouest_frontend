@@ -12,9 +12,7 @@ export default function Expectations({ headTitle, expectations }: Props) {
   return (
     <WhiteBand headTitle={headTitle}>
       <div className={styles.container}>
-
         {expectations.map(expectation => <Expectation key={expectation.text} {...expectation} />)}
-
       </div>
     </WhiteBand>
   );
