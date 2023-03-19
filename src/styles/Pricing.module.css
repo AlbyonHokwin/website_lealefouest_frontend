@@ -86,6 +86,6 @@
 
   .reasons {
     width: 90%;
-    gap: 10px;
+    gap: max(10px, 2dvh);
   }
 }
