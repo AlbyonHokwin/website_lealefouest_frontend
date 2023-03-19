@@ -1,17 +1,27 @@
 .main {
-    width: 100vw;
-    height: 100vh;
-    width: 100dvw;
-    height: 100dvh;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    overflow-y: scroll;
-    scroll-snap-type: y mandatory;
+  width: 100vw;
+  height: 100vh;
+  width: 100dvw;
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
 }
 
 .section {
-    width: 100%;
-    min-height: 100%;
-    scroll-snap-align: start;
+  width: 100%;
+  min-height: 100%;
+  scroll-snap-align: start;
+}
+
+@media (max-aspect-ratio: 2/3) {
+  .main {
+    scroll-snap-type: unset;
+  }
+
+  .section {
+    border-bottom: 2px solid white;
+  }
 }
