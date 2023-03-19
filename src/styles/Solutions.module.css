@@ -27,6 +27,10 @@
   gap: 1rem;
 }
 
+.solutions > li {
+  list-style: none;
+}
+
 @media (max-aspect-ratio: 2/3) {
   .container {
     flex-direction: column;

@@ -23,14 +23,18 @@ export default function Solutions({ headTitle, picture, solutions, iconBonus, bo
         </div>
 
         <ul className={styles.solutions}>
-          <ul>
-            {solutions.map((solution, i) => <Solution key={i} solution={solution} />)}
-          </ul>
-          <ul>
-            {!!bonuses.length &&
-              bonuses.map((bonus, i) => <Bonus key={i} icon={iconBonus} bonus={bonus} />)
-            }
-          </ul>
+          <li>
+            <ul>
+              {solutions.map((solution, i) => <Solution key={i} solution={solution} />)}
+            </ul>
+          </li>
+          <li>
+            <ul>
+              {!!bonuses.length &&
+                bonuses.map((bonus, i) => <Bonus key={i} icon={iconBonus} bonus={bonus} />)
+              }
+            </ul>
+          </li>
         </ul>
 
       </div>
