@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import styles from '@/styles/Contact.module.css';
 
-import Image from '../elements/Image';
+import CustomImage from '../elements/CustomImage';
 import Comment from '../elements/Comment';
 import ContactForm from './ContactForm';
 
@@ -28,7 +28,7 @@ export default function Contact({ headTitle, picture, buttonText, comments, owne
     <div className={styles.container}>
       <div className={styles.content}>
         <div className={styles.picture}>
-          <Image image={picture} objectFit='cover' maxSize={400} />
+          <CustomImage image={picture} objectFit='cover' maxSize={400} />
         </div>
 
         {formIsDisplayed && <div className={`${styles.form} ${formIsDisplayed ? styles.visible : styles.hidden}`}>

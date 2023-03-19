@@ -4,7 +4,7 @@ import styles from '@/styles/Solutions.module.css';
 import WhiteBand from '../layouts/WhiteBand';
 import Solution from '../elements/Solution';
 import Bonus from '../elements/Bonus';
-import Image from '../elements/Image';
+import CustomImage from '../elements/CustomImage';
 
 import type { SolutionsProps } from '@/types/SolutionsProps';
 
@@ -15,7 +15,7 @@ export default function Solutions({ headTitle, picture, solutions, iconBonus, bo
     <WhiteBand headTitle={headTitle}>
       <div className={styles.container}>
         <div className={styles.picture}>
-          <Image
+          <CustomImage
             image={picture}
             objectFit='cover'
             maxSize={400}

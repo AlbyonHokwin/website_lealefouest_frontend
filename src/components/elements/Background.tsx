@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from '@/styles/Background.module.css'
 
-import Image from './Image';
+import CustomImage from './CustomImage';
 import { SanityImage } from '@/types/SanityImage';
 
 type Props = {
@@ -11,7 +11,7 @@ type Props = {
 export default function Background({ background }: Props) {
     return (
         <div className={styles.background}>
-            <Image image={background} objectFit='cover' maxSize={2000} priority />
+            <CustomImage image={background} objectFit='cover' maxSize={2000} priority />
         </div>
     );
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '@/styles/Image.module.css';
+import styles from '@/styles/CustomImage.module.css';
 import NextImage from 'next/image';
 import imageUrlBuilder from '@sanity/image-url';
 import { sanityClient } from '@/pages/api/sanityClient';
@@ -15,7 +15,7 @@ type Props = {
     toAddToAlt?: string;
 }
 
-export default function Image({ image, objectFit, maxSize, priority = false, toAddToAlt = '' }: Props) {
+export default function CustomImage({ image, objectFit, maxSize, priority = false, toAddToAlt = '' }: Props) {
     const builder: ImageUrlBuilder = imageUrlBuilder(sanityClient);
     let maxWidth = maxSize;
     let maxHeight = maxSize;

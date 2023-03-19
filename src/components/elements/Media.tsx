@@ -2,7 +2,7 @@ import React from 'react';
 import styles from '@/styles/Media.module.css';
 
 import SocialNetwork from './SocialNetwork';
-import Image from './Image';
+import CustomImage from './CustomImage';
 import Icon from './Icon';
 
 import type { Media } from '@/types/OtherMediasProps';
@@ -19,7 +19,7 @@ export default function Media({ name, mainUrl, text, image, contained, useArrow,
         <div className={styles.containerWithArrow}>
           <div className={styles.links}>
             <a href={mainUrl} className={styles.imageContainer}>
-              <Image image={image} objectFit={contained ? 'contain' : 'cover'} maxSize={400}
+              <CustomImage image={image} objectFit={contained ? 'contain' : 'cover'} maxSize={400}
                 toAddToAlt={`Link to ${name}`}
               />
             </a>
@@ -49,7 +49,7 @@ export default function Media({ name, mainUrl, text, image, contained, useArrow,
             </h4>
 
             <a href={mainUrl} className={styles.imageContainer}>
-              <Image image={image} objectFit={contained ? 'contain' : 'cover'} maxSize={400}
+              <CustomImage image={image} objectFit={contained ? 'contain' : 'cover'} maxSize={400}
                 toAddToAlt={`Link to ${name}`}
               />
             </a>

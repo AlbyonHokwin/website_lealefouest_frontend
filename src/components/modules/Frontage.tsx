@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from '@/styles/Frontage.module.css';
 
-import Image from '../elements/Image';
+import CustomImage from '../elements/CustomImage';
 import { PortableText } from '@portabletext/react';
 
 import type { FrontageProps } from '@/types/FrontageProps';
@@ -41,7 +41,7 @@ export default function Frontage(props: Props) {
 
         <div className={styles.right}>
           <div className={styles.image}>
-            <Image image={picture} objectFit='cover' maxSize={1000} priority />
+            <CustomImage image={picture} objectFit='cover' maxSize={1000} priority />
           </div>
         </div>
       </div>
