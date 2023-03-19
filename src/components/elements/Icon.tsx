@@ -24,9 +24,9 @@ export default function Icon({ icon, objectFit, useAccentColor = false, filter =
     .url();
 
   useEffect(() => {
-    useAccentColor && setStyle({ ...style, filter: 'var(--color-accent-filter)' });
-    filter && setStyle({ ...style, filter });
-  }, [useAccentColor, filter]);
+    useAccentColor && setStyle({ objectFit, filter: 'var(--color-accent-filter)' });
+    filter && setStyle({ objectFit, filter });
+  }, [objectFit, useAccentColor, filter]);
 
   return (
     <div className={styles.container}>
