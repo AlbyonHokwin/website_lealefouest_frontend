@@ -97,16 +97,16 @@
 
 @media (max-aspect-ratio: 2/3) {
   .legend {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 
   .radio {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 
   .radioInput {
-    height: 0.9rem;
-    width: 0.9rem;
+    height: 0.7rem;
+    width: 0.7rem;
   }
 
   .errorMessage {

@@ -24,8 +24,8 @@
   flex: 1 10;
   aspect-ratio: 1/1;
   width: auto;
-  min-height: 200px;
-  max-height: min(400px, 80dvw);
+  min-height: 100px;
+  max-height: min(500px, 50dvw);
   border-radius: 50%;
   border: var(--line-size) solid white;
   overflow: hidden;
@@ -74,4 +74,10 @@
 
 .button:active {
   scale: 0.95;
+}
+
+@media (max-aspect-ratio: 2/3) {
+  .buttonContainer {
+    width: unset;
+  }
 }
