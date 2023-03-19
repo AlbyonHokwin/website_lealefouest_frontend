@@ -37,7 +37,7 @@ export default function CustomImage({ image, objectFit, maxSize, priority = fals
             <NextImage
                 src={src}
                 alt={`${image.alt}; ${toAddToAlt}`}
-                style={{ objectFit, padding: objectFit === 'cover' ? 0 : '5dvmin' }}
+                style={{ objectFit, padding: objectFit === 'cover' ? 0 : '5vmin' }}
                 sizes="(max-width: 800px) 100vw, 2000px"
                 fill
                 priority={priority}
