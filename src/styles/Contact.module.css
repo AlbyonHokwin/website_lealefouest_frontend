@@ -14,10 +14,10 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  gap: 2dvh;
+  gap: 2vh;
   overflow-x: hidden;
   overflow-y: auto;
-  --line-size: clamp(1px, 1dvmin, 5px);
+  --line-size: clamp(1px, 1vmin, 5px);
 }
 
 .picture {
@@ -25,7 +25,7 @@
   aspect-ratio: 1/1;
   width: auto;
   min-height: 100px;
-  max-height: min(500px, 50dvw);
+  max-height: min(500px, 50vw);
   border-radius: 50%;
   border: var(--line-size) solid white;
   overflow: hidden;

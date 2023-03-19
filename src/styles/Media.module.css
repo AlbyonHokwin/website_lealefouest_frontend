@@ -5,7 +5,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 2dvh;
+  gap: 2vh;
 }
 
 .containerWithArrow {
@@ -23,7 +23,7 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  gap: 2dvh;
+  gap: 2vh;
 }
 
 .links {
@@ -33,7 +33,7 @@
   justify-content: center;
   align-items: center;
   position: relative;
-  gap: max(2dvh, 10px);
+  gap: max(2vh, 10px);
 }
 
 .imageContainer {
@@ -55,7 +55,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  gap: 1dvh;
+  gap: 1vh;
   width: 50%;
 }
 

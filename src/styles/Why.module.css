@@ -6,7 +6,7 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  gap: 5dvh;
+  gap: 5vh;
 }
 
 .shockPhraseContainer {
@@ -29,9 +29,9 @@
 
 .em {
   border-bottom: 3px solid black;
-  padding-bottom: 3dvh;
-  margin-bottom: 3dvh;
-  font-size: 10dvh;
+  padding-bottom: 3vh;
+  margin-bottom: 3vh;
+  font-size: 10vh;
   font-family: var(--font-serif);
   font-weight: bold;
 }
@@ -43,7 +43,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 2dvh;
+  gap: 2vh;
 }
 
 @media (max-aspect-ratio: 2/3) {

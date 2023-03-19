@@ -5,8 +5,8 @@
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  gap: 2dvw;
-  --icon-size: clamp(10px, 10dvmin, 100px);
+  gap: 2vw;
+  --icon-size: clamp(10px, 10vmin, 100px);
 }
 
 .icon {

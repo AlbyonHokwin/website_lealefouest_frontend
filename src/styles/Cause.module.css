@@ -4,7 +4,7 @@
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  gap: 2dvw;
+  gap: 2vw;
   padding-right: 5px;
   --icon-size: 2.5rem;
 }

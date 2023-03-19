@@ -1,5 +1,5 @@
 .container {
-  --icon-size: clamp(15px, 10dvmin, 70px);
+  --icon-size: clamp(15px, 10vmin, 70px);
   width: clamp(150px, 80%, 900px);
   display: grid;
   grid-template-columns: var(--icon-size) minmax(100px, auto);

@@ -5,14 +5,14 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  --band-height: 50dvh;
+  --band-height: 50vh;
 }
 
 .titleContainer {
   display: flex;
   align-items: center;
   min-height: calc(var(--band-height) / 2);
-  margin: 0 5dvw;
+  margin: 0 5vw;
 }
 
 .title {
@@ -32,12 +32,12 @@
   align-items: center;
   position: relative;
   padding: max(3%, 20px);
-  margin-bottom: 3dvh;
+  margin-bottom: 3vh;
 }
 
 .topAccentBar,
 .bottomAccentBar {
-  --bar-height: 2dvh;
+  --bar-height: 2vh;
   width: 25%;
   height: var(--bar-height);
   background-color: var(--color-accent);
