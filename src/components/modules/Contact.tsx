@@ -28,7 +28,7 @@ export default function Contact({ headTitle, picture, buttonText, comments, owne
     <div className={styles.container}>
       <div className={styles.content}>
         <div className={styles.picture}>
-          <CustomImage image={picture} objectFit='cover' maxSize={400} />
+          <CustomImage image={picture} objectFit='cover' maxSize={500} />
         </div>
 
         {formIsDisplayed && <div className={`${styles.form} ${formIsDisplayed ? styles.visible : styles.hidden}`}>
