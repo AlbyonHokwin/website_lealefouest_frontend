@@ -15,7 +15,7 @@ export default function Pricing({ headTitle, price, motivation, icon, reasons }:
       <div className={styles.container}>
         <div className={styles.priceContainer}>
           <h4 className={styles.price}>
-            {price} €
+            {price} € <span>TTC</span>
           </h4>
 
           <div className={styles.divider} />
