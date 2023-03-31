@@ -25,7 +25,7 @@ export default function Contact({ headTitle, picture, buttonText, comments, owne
   }
 
   return (
-    <div className={styles.container}>
+    <div id='contact' className={styles.container}>
       <div className={styles.content}>
         <div className={styles.picture}>
           <CustomImage image={picture} objectFit='cover' maxSize={500} />
