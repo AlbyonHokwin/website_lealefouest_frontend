@@ -72,12 +72,14 @@
   position: relative;
   min-width: 66%;
   text-align: center;
+  border: 5px solid var(--font-color-light);
+  border-radius: var(--border-radius);
+  background-color: transparent;
   font-size: 1.5rem;
   color: var(--font-color-light);
   font-weight: bold;
   white-space: nowrap;
   padding: 2px;
-  border: 2px solid white;
   z-index: 10;
   cursor: pointer;
   transition: scale 0.1s linear;
