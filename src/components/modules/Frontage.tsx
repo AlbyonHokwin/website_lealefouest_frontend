@@ -13,7 +13,7 @@ type Props = FrontageProps & {
 }
 
 export default function Frontage(props: Props) {
-  const { introductory, picture, firstname, lastname } = props;
+  const { introductory, picture, buttonLabel, firstname, lastname } = props;
 
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
     e.preventDefault();
@@ -46,7 +46,7 @@ export default function Frontage(props: Props) {
               </div>
               {firstname} {lastname}
             </h2>
-            <Link href='#contact' onClick={handleClick} className={styles.contactMe}>Contacte-moi</Link>
+            <Link href='#contact' onClick={handleClick} className={styles.contactMe}>{buttonLabel}</Link>
           </div>
 
         </div>

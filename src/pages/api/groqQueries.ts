@@ -3,7 +3,7 @@ import { groq } from 'next-sanity';
 export const groqQueries: Record<string, string> = {
     components: groq`*[_type == "component"] | order(page, ASC) {name, page}`,
     profile: groq`*[_type == "profile"]{firstname, lastname, email}[0]`,
-    home: groq`*[_type == "home"]{component->{name, page}, introductory, picture->}[0]`,
+    home: groq`*[_type == "home"]{component->{name, page}, introductory, picture->, buttonLabel}[0]`,
     why: groq`*[_type == "why"]{component->{name, page}, headTitle, shockPhrase, causes[] {name, icon->}}[0]`,
     solutions: groq`*[_type == "solution"]{component->{name, page}, headTitle, picture->, solutions, iconBonus->, bonuses}[0]`,
     methodologies: groq`*[_type == "methodology"]{component->{name, page}, headTitle, methods[] {name, picture->}}[0]`,

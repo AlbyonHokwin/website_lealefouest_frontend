@@ -6,4 +6,5 @@ export type FrontageProps = {
     component: Component;
     introductory: RichText;
     picture: SanityImage;
+    buttonLabel: string;
 }
