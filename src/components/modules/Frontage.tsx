@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from '@/styles/Frontage.module.css';
+import Link from 'next/link';
 
 import CustomImage from '../elements/CustomImage';
 import { PortableText } from '@portabletext/react';
@@ -13,6 +14,14 @@ type Props = FrontageProps & {
 
 export default function Frontage(props: Props) {
   const { introductory, picture, firstname, lastname } = props;
+
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+    e.preventDefault();
+    const href = e.currentTarget.href;
+    const targetId = href.replace(/.*\#/, '');
+    const element = document.getElementById(targetId);
+    element?.scrollIntoView({ behavior: 'smooth' });
+  }
 
   return (
     <div className={styles.container}>
@@ -30,13 +39,16 @@ export default function Frontage(props: Props) {
             }}
           />
 
+          <div className={styles.nameAndContact}>
+            <h2 className={styles.name}>
+              <div className={styles.whiteLine}>
+                <div className={styles.verticalLine}></div>
+              </div>
+              {firstname} {lastname}
+            </h2>
+            <Link href='#contact' onClick={handleClick} className={styles.contactMe}>Me contacter</Link>
+          </div>
 
-          <h2 className={styles.name}>
-            <div className={styles.whiteLine}>
-              <div className={styles.verticalLine}></div>
-            </div>
-            {firstname} {lastname}
-          </h2>
         </div>
 
         <div className={styles.right}>
