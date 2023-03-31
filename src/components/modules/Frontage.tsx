@@ -46,7 +46,7 @@ export default function Frontage(props: Props) {
               </div>
               {firstname} {lastname}
             </h2>
-            <Link href='#contact' onClick={handleClick} className={styles.contactMe}>Me contacter</Link>
+            <Link href='#contact' onClick={handleClick} className={styles.contactMe}>Contacte-moi</Link>
           </div>
 
         </div>
